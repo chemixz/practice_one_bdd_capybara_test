@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'sass-rails' ,'~>6.0.0'
 gem 'bootstrap-sass' , '~>3.4.1'
+gem 'autoprefixer-rails', '~> 9.8', '>= 9.8.6.3'
 gem 'bcrypt', '~>3.1.16'
 gem 'rake' ,'~>13.0.1'
 gem 'will_paginate'
