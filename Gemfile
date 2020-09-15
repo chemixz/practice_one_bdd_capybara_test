@@ -13,10 +13,20 @@ gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 4.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-gem 'devise'
 
-gem 'sass-rails'
-gem 'bootstrap-sass'
+gem 'sass-rails' ,'~>6.0.0'
+gem 'bootstrap-sass' , '~>3.4.1'
+gem 'bcrypt', '~>3.1.16'
+gem 'rake' ,'~>13.0.1'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'turbolinks'
+
+gem 'webdrivers', '~> 4.4', '>= 4.4.1'
+gem 'capybara-selenium', '~> 0.0.6'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -29,13 +39,15 @@ gem 'bootstrap-sass'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-	gem 'rspec-rails', '3.1.0'
+	gem 'rspec-rails', '4.0'
+  gem 'faker', '~> 2.13'
+  gem 'factory_bot_rails', '~> 6.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :test do
-  gem 'capybara', '2.7.1'
+  gem 'capybara', '3.33.0'
 end
 
 group :development do

@@ -1,25 +1,19 @@
-# README
+Process for creating articles feature test and feature
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Create a branch to do the development work
+- Write feature test
+- Build features to make test pass on by one
+- Once the feature test passes with no errors - merge branch with master branch
 
-Things you may want to cover:
+Actions
 
-* Ruby version
+- Visit root page
+- Click on new article link
+- fill in title
+- fill in body
+- create article (click button)
 
-* System dependencies
+expections
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# practice_one_bdd_capybara_test
+- Article has been created
+- go to articles path

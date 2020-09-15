@@ -1,32 +1,21 @@
-<%= form_with(model: category, local: true) do |form| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<%= render 'partials/errors', obj: @category %>
 
-      <ul>
-        <% category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <div class="form-group">
+    <div class="control-label col-sm-2">
+      <%= f.label :title %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_area :title %>
+    <div class="col-sm-8">
+      <%= f.text_field :title, class: "form-control", placeholder: "Category name", autofocus: true %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_area :color %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Back', categories_path , class:'btn btn-danger btn-lg' %>
+    </div>
   </div>
 <% end %>
+
+
+    

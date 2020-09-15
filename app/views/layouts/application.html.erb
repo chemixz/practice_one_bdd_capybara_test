@@ -3,21 +3,18 @@
   <head>
     <title>PracticeOne</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+    
   </head>
 
   <body>
     <%= render "partials/header" %>
-    <%= render "partials/notices" %>
+    <%= render "partials/messages" %>
+    
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <%= yield %>
-        </div>
-      </div>
+       <%= yield %>
     </div>
   </body>
 </html>
